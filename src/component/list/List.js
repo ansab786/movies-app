@@ -4,16 +4,16 @@ import genreData from "../../constant/genre.json";
 import { useGenreDataContext } from "../../context/activeGenreContext";
 
 export default function List() {
-  const [_activeGenre, { handelGenreChange }] = useGenreDataContext();
+  const [_activeGenre, { handleGenreChange }] = useGenreDataContext();
 
   const handleActiveGenreChange = (genre) => {
-    handelGenreChange({
+    handleGenreChange({
       name: genre.name,
       _id: genre._id,
     });
   };
   const handleShowAllMovies = () => {
-    handelGenreChange({
+    handleGenreChange({
       name: "All Movies",
       _id: "1122",
     });

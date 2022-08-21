@@ -9,13 +9,13 @@ function ActiveGenreContextProvider({ children }) {
     _id: "1122",
   });
 
-  const handelGenreChange = (activeGenre) => {
+  const handleGenreChange = (activeGenre) => {
     setActiveGenre(activeGenre);
   };
 
   return (
     <CreateActiveGenreStateContext.Provider value={{ activeGenre }}>
-      <CreateActiveGenreDispatchContext.Provider value={{ handelGenreChange }}>
+      <CreateActiveGenreDispatchContext.Provider value={{ handleGenreChange }}>
         {children}
       </CreateActiveGenreDispatchContext.Provider>
     </CreateActiveGenreStateContext.Provider>
@@ -26,7 +26,7 @@ const useActiveGenreStateContext = () => {
   const context = React.useContext(CreateActiveGenreStateContext);
 
   if (context === undefined) {
-    throw Error("Create Active Genre Not Working");
+    throw Error("There is an error...Create Active Genre Not Working");
   }
 
   return context;
@@ -35,7 +35,7 @@ const useActiveGenreDispatchContext = () => {
   const context = React.useContext(CreateActiveGenreDispatchContext);
 
   if (context === undefined) {
-    throw Error("Create Active Genre Not Working");
+    throw Error("There is an error...Create Active Genre Not Working");
   }
 
   return context;
