@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination as PRB } from "react-bootstrap";
+import { Pagination as PaginationReactBootstrap } from "react-bootstrap";
 
 function Pagination({
   totalMovies,
@@ -9,20 +9,20 @@ function Pagination({
 }) {
   const pages = new Array(Math.ceil(totalMovies / moviesPerPage)).fill(0);
   return (
-    <PRB>
+    <PaginationReactBootstrap>
       {pages.map((_value, index) => {
         const number = index + 1;
         return (
-          <PRB.Item
+          <PaginationReactBootstrap.Item
             key={number}
             active={number === currentPage}
             onClick={() => handlePaginate(number)}
           >
             {number}
-          </PRB.Item>
+          </PaginationReactBootstrap.Item>
         );
       })}
-    </PRB>
+    </PaginationReactBootstrap>
   );
 }
 
