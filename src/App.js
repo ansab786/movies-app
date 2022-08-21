@@ -7,7 +7,6 @@ import Table from "./component/table/Table";
 export default function App() {
   return (
     <div>
-      <h1>Ansab App</h1>
       <div className="container my-3">
         <div className="row">
           <div className="col-sm-3">
